@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário Eloh</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff69b4;
+    }
+
+    .section {
+      margin: 40px 0;
+      padding: 20px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-options label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Feliz Aniversário Eloh (Elesbica, Eletero, Elor da minha vida.) 🎉</h1>
+
+  <!-- Poema -->
+  <div class="section">
+    <h2>Feliz Aniversário meu amor</h2>
+    <p>
+        Feliz aniversário, minha deusa.<br>
+        Parabéns por tudo que conquistou e pelo que vai conquistar.<br>
+        Você é um orgulho, és tudo de mais perfeito, és meu lado feliz.<br>
+        Sem você, nada teria graça, nada seria tão legal ou importante.<br>
+        Por esses e muitos outros motivos, que eu não imagino minha vida sem você.<br>
+        Não há nada nesse mundo que eu não sacrificaria pela tua felicidade.<br>
+        Pois com certeza você vale mais que qualquer coisa nesse mundo.<br>
+        Minha alma, minha lealdade e o mais puro amor que eu posso produzir são seus.<br>
+        Nada é comparável a você e a cada momento junto eu tenho mais certeza.<br>
+        A certeza da escolha certa de ser teu melhor amigo, irmão e tudo que for necessário.<br>
+        Em todos os dias, eu estarei feliz em servir a vossa senhoria.<br>
+        Em todos os meus dias de vida, serei completo ao estar contigo.<br>
+        Eu te amo.<br>
+        Seja a mulher mais feliz do mundo, porque você não merece nada abaixo disso, nada.
+    </p>
+  </div>
+
+  <!-- Quiz -->
+  <div class="section">
+    <h2>Quanto ce conhece sobre nozes?</h2>
+    <div class="quiz-question">
+      <p>A quanto tempo a gente se conhece? </p>
+      <div class="quiz-options">
+        <label><input type="radio" name="q1" value="0"> 4 anos</label>
+        <label><input type="radio" name="q1" value="1"> 6 anos</label>
+        <label><input type="radio" name="q1" value="0"> 5 anos</label>
+      </div>
+    </div>
+    <div class="quiz-question">
+      <p>É Biscoito ou Bolacha? </p>
+      <div class="quiz-options">
+        <label><input type="radio" name="q2" value="1"> Biscoito</label>
+        <label><input type="radio" name="q2" value="0"> Cream Craker</label>
+        <label><input type="radio" name="q2" value="0"> To errada (Bolacha)</label>
+      </div>
+    </div>
+    <button onclick="checkQuiz()">Ver Resultado</button>
+    <p id="quiz-result"></p>
+  </div>
+
+  <!-- Vídeo do YouTube -->
+  <div class="section">
+    <h2>Clica ai pra ir no YouTube assistir esse vídeo</h2>
+    <a href="https://youtu.be/NnxS7iHNhdE?si=mMURVmCfgdNPOkbO" target="_blank">
+      <button>Te amo com toda minha alma</button>
+    </a>
+  </div>
+
+
+  <script>
+    function checkQuiz() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+
+      if (!q1 || !q2) {
+        document.getElementById('quiz-result').textContent = 'Responde ai zé';
+        return;
+      }
+
+      const score = Number(q1.value) + Number(q2.value);
+
+      let message = '';
+      if (score === 2) {
+        message = 'SABE MUITO';
+      } else if (score === 1) {
+        message = 'AINDA NÃO';
+      } else {
+        message = 'DIGO NADA';
+      }
+
+      document.getElementById('quiz-result').textContent = message;
+    }
+  </script>
+
+</body>
+</html>
+
